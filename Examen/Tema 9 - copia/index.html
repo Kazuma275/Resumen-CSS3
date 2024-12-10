@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Flexbox y Posicionamiento</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .example {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Ejemplo 1: Flexbox básico */
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2196f3;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .flex-item {
+      background-color: #ffffff;
+      color: #2196f3;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    /* Ejemplo 2: Posicionamiento relativo */
+    .relative-container {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .relative-item {
+      position: relative;
+      top: 20px;
+      left: 30px;
+      background-color: #ffffff;
+      color: #4caf50;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    /* Ejemplo 3: Posicionamiento absoluto */
+    .absolute-container {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background-color: #ff5722;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .absolute-item {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #ffffff;
+      color: #ff5722;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    /* Ejemplo 4: Posicionamiento fijo */
+    .fixed-container {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #9c27b0;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    /* Ejemplo 5: Posicionamiento sticky */
+    .sticky-container {
+      position: sticky;
+      top: 0;
+      background-color: #00bcd4;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content {
+      height: 1500px;
+      padding: 20px;
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de Flexbox y Posicionamiento</h1>
+
+  <!-- Ejemplo 1: Flexbox básico -->
+  <div class="example">
+    <h2>Ejemplo 1: Flexbox básico</h2>
+    <div class="flex-container">
+      <div class="flex-item">Elemento 1</div>
+      <div class="flex-item">Elemento 2</div>
+      <div class="flex-item">Elemento 3</div>
+    </div>
+  </div>
+
+  <!-- Ejemplo 2: Posicionamiento relativo -->
+  <div class="example">
+    <h2>Ejemplo 2: Posicionamiento relativo</h2>
+    <div class="relative-container">
+      <div class="relative-item">Elemento posicionado relativo</div>
+    </div>
+  </div>
+
+  <!-- Ejemplo 3: Posicionamiento absoluto -->
+  <div class="example">
+    <h2>Ejemplo 3: Posicionamiento absoluto</h2>
+    <div class="absolute-container">
+      <div class="absolute-item">Elemento posicionado absoluto</div>
+    </div>
+  </div>
+
+  <!-- Ejemplo 4: Posicionamiento fijo -->
+  <div class="example">
+    <h2>Ejemplo 4: Posicionamiento fijo</h2>
+    <div class="fixed-container">Elemento posicionado fijo</div>
+  </div>
+
+  <!-- Ejemplo 5: Posicionamiento sticky -->
+  <div class="example">
+    <h2>Ejemplo 5: Posicionamiento sticky</h2>
+    <div class="sticky-container">Elemento posicionado sticky</div>
+    <div class="content">
+      <p>Desplázate para ver cómo se comporta el elemento sticky al llegar a la parte superior de la pantalla.</p>
+    </div>
+  </div>
+</body>
+</html>

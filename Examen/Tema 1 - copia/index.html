@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Técnicas Imprescindibles de CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .example {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .code {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .code p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Técnicas Imprescindibles de CSS</h1>
+
+  <!-- 1.1 Propiedades shorthand -->
+  <div class="example">
+    <h2>1.1 Propiedades Shorthand</h2>
+    <p>Las propiedades shorthand permiten escribir varias propiedades de manera abreviada para simplificar el código.</p>
+    <div class="code">
+      <p>/* Ejemplo de margin shorthand */</p>
+      <p>margin: 10px 20px 15px 5px;</p>
+      <p>/* Ejemplo de padding shorthand */</p>
+      <p>padding: 5px 10px;</p>
+    </div>
+  </div>
+
+  <!-- 1.2 Limpiar floats -->
+  <div class="example">
+    <h2>1.2 Limpiar Floats</h2>
+    <p>Para evitar que los elementos flotados afecten al layout, se puede usar la propiedad <code>clear</code> o un "clearfix".</p>
+    <div class="code">
+      <p>/* Clearfix */</p>
+      <p>.clearfix::after {</p>
+      <p>  content: "";</p>
+      <p>  display: table;</p>
+      <p>  clear: both;</p>
+      <p>}</p>
+    </div>
+  </div>
+
+  <!-- 1.3 Elementos de la misma altura -->
+  <div class="example">
+    <h2>1.3 Elementos de la Misma Altura</h2>
+    <p>Usar <code>display: flex</code> o <code>display: grid</code> para hacer que los elementos tengan la misma altura.</p>
+    <div class="code">
+      <p>/* Ejemplo de flexbox */</p>
+      <p>.container {</p>
+      <p>  display: flex;</p>
+      <p>  align-items: stretch;</p>
+      <p>}</p>
+    </div>
+  </div>
+
+  <!-- 1.4 Sombras -->
+  <div class="example">
+    <h2>1.4 Sombras</h2>
+    <p>Se pueden aplicar sombras a los elementos usando la propiedad <code>box-shadow</code> y <code>text-shadow</code>.</p>
+    <div class="code">
+      <p>/* Ejemplo de box-shadow */</p>
+      <p>box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);</p>
+      <p>/* Ejemplo de text-shadow */</p>
+      <p>text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);</p>
+    </div>
+  </div>
+
+  <!-- 1.5 Esquinas redondeadas -->
+  <div class="example">
+    <h2>1.5 Esquinas Redondeadas</h2>
+    <p>Se pueden redondear las esquinas de un elemento con la propiedad <code>border-radius</code>.</p>
+    <div class="code">
+      <p>/* Ejemplo de border-radius */</p>
+      <p>border-radius: 10px;</p>
+    </div>
+  </div>
+
+  <!-- 1.6 Transparencias -->
+  <div class="example">
+    <h2>1.6 Transparencias</h2>
+    <p>Usar la propiedad <code>opacity</code> o valores de color con alfa (rgba) para aplicar transparencia.</p>
+    <div class="code">
+      <p>/* Ejemplo de opacity */</p>
+      <p>opacity: 0.5;</p>
+      <p>/* Ejemplo de color con alfa */</p>
+      <p>background-color: rgba(255, 0, 0, 0.5);</p>
+    </div>
+  </div>
+
+  <!-- 1.7 Sustitución de texto -->
+  <div class="example">
+    <h2>1.7 Sustitución de Texto</h2>
+    <p>Usar la propiedad <code>font-family</code> para cambiar el tipo de fuente o usar propiedades de reemplazo como <code>::before</code> y <code>::after</code>.</p>
+    <div class="code">
+      <p>/* Ejemplo de ::before */</p>
+      <p>.text::before {</p>
+      <p>  content: "Nuevo texto ";</p>
+      <p>}</p>
+    </div>
+  </div>
+
+  <!-- 1.8 Rollovers y sprites -->
+  <div class="example">
+    <h2>1.8 Rollovers y Sprites</h2>
+    <p>Usar imágenes de sprites para optimizar el uso de imágenes y cambiar el estado de los elementos con <code>:hover</code>.</p>
+    <div class="code">
+      <p>/* Ejemplo de uso de sprite */</p>
+      <p>.button {</p>
+      <p>  background-image: url('sprite.png');</p>
+      <p>  background-position: 0 0;</p>
+      <p>}</p>
+      <p>.button:hover {</p>
+      <p>  background-position: -50px 0;</p>
+      <p>}</p>
+    </div>
+  </div>
+
+  <!-- 1.9 Texto -->
+  <div class="example">
+    <h2>1.9 Texto</h2>
+    <p>Usar propiedades como <code>text-align</code>, <code>text-shadow</code>, y unidades como <code>em</code>, <code>rem</code> para estilizar el texto.</p>
+    <div class="code">
+      <p>/* Ejemplo de text-shadow */</p>
+      <p>text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);</p>
+      <p>/* Ejemplo de alineación de texto */</p>
+      <p>text-align: center;</p>
+    </div>
+  </div>
+
+</body>
+</html>

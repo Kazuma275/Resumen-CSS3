@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capítulo 6: Transformación en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .example {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .code {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .code p {
+      margin: 0;
+    }
+
+    .transform-example {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .transform-box {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .transform-box:hover {
+      transform: rotate(45deg);
+    }
+
+    .transform-3d {
+      width: 150px;
+      height: 150px;
+      background-color: #e74c3c;
+      margin: 20px;
+      transform-style: preserve-3d;
+      transform: rotateX(45deg) rotateY(45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Capítulo 6: Transformación en CSS</h1>
+
+  <!-- 6.1 Transform -->
+  <div class="example">
+    <h2>6.1 Propiedad transform</h2>
+    <p>La propiedad `transform` se usa para aplicar transformaciones 2D y 3D a un elemento. Se puede usar para rotar, escalar, mover, inclinar y más.</p>
+    <div class="code">
+      <p>/* Ejemplo de transformación 2D */</p>
+      <p>.transform-box {</p>
+      <p>  transform: rotate(45deg);</p>
+      <p>}</p>
+      <p>/* Aplica una rotación de 45 grados al elemento */</p>
+    </div>
+    <div class="transform-example">
+      <div class="transform-box">Rotar</div>
+    </div>
+  </div>
+
+  <!-- 6.2 Propiedades 3D -->
+  <div class="example">
+    <h2>6.2 Propiedades 3D</h2>
+    <p>Las transformaciones 3D permiten manipular elementos en tres dimensiones. Propiedades como `rotateX()`, `rotateY()`, y `rotateZ()` se usan para rotar en distintos ejes.</p>
+    <div class="code">
+      <p>/* Ejemplo de transformación 3D */</p>
+      <p>.transform-3d {</p>
+      <p>  transform: rotateX(45deg) rotateY(45deg);</p>
+      <p>  transform-style: preserve-3d;</p>
+      <p>}</p>
+      <p>/* Aplica una rotación en los ejes X e Y */</p>
+    </div>
+    <div class="transform-example">
+      <div class="transform-3d">3D</div>
+    </div>
+  </div>
+
+</body>
+</html>

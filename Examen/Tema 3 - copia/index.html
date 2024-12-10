@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capítulo 3: Selectores en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .example {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .code {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .code p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Capítulo 3: Selectores en CSS</h1>
+
+  <!-- 3.1.1 Selector de hijos -->
+  <div class="example">
+    <h2>3.1.1 Selector de Hijos</h2>
+    <p>Los selectores de hijos seleccionan elementos que son hijos directos de un elemento específico.</p>
+    <div class="code">
+      <p>/* Ejemplo de selector de hijos */</p>
+      <p>div > p {</p>
+      <p>  color: blue;</p>
+      <p>}</p>
+      <p>/* Selecciona todos los <p> que son hijos directos de <div> */</p>
+    </div>
+  </div>
+
+  <!-- 3.2 Pseudo-clases -->
+  <div class="example">
+    <h2>3.2 Pseudo-clases</h2>
+    <p>Las pseudo-clases se utilizan para definir el estado de un elemento (por ejemplo, cuando se pasa el ratón por encima).</p>
+    <div class="code">
+      <p>/* Ejemplo de pseudo-clase */</p>
+      <p>a:hover {</p>
+      <p>  color: red;</p>
+      <p>}</p>
+      <p>/* Cambia el color del enlace al pasar el ratón */</p>
+      <p>p:first-child {</p>
+      <p>  font-weight: bold;</p>
+      <p>}</p>
+      <p>/* Selecciona el primer <p> dentro de un contenedor */</p>
+    </div>
+  </div>
+
+  <!-- 3.3 Pseudo-elementos -->
+  <div class="example">
+    <h2>3.3 Pseudo-elementos</h2>
+    <p>Los pseudo-elementos permiten seleccionar y estilizar partes específicas de un elemento.</p>
+    <div class="code">
+      <p>/* Ejemplo de pseudo-elemento */</p>
+      <p>p::before {</p>
+      <p>  content: '>>';</p>
+      <p>  color: green;</p>
+      <p>}</p>
+      <p>/* Agrega contenido antes de cada <p> */</p>
+      <p>p::after {</p>
+      <p>  content: '<<';</p>
+      <p>  color: green;</p>
+      <p>}</p>
+      <p>/* Agrega contenido después de cada <p> */</p>
+    </div>
+  </div>
+
+  <!-- 3.4 Agrupación de selectores -->
+  <div class="example">
+    <h2>3.4 Agrupación de Selectores</h2>
+    <p>Se pueden agrupar selectores para aplicar el mismo estilo a varios elementos a la vez, optimizando así el código.</p>
+    <div class="code">
+      <p>/* Ejemplo de agrupación de selectores */</p>
+      <p>h1, h2, h3 {</p>
+      <p>  margin-bottom: 15px;</p>
+      <p>}</p>
+      <p>/* Aplica el mismo margen inferior a <h1>, <h2> y <h3> */</p>
+      <p>p, span, a {</p>
+      <p>  color: black;</p>
+      <p>}</p>
+      <p>/* Aplica el color negro a <p>, <span> y <a> */</p>
+    </div>
+  </div>
+
+</body>
+</html>

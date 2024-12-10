@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Animaciones en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .example {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .animated-box, .transition-box, .scroll-box {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      border-radius: 8px;
+      margin: 20px auto;
+      font-size: 16px;
+    }
+
+    /* Ejemplo de animación con keyframes */
+    .animated-box {
+      background-color: #3498db;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    /* Ejemplo de transición de hover */
+    .transition-box {
+      background-color: #2ecc71;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .transition-box:hover {
+      transform: scale(1.2);
+    }
+
+    /* Animación de desplazamiento con efecto parallax */
+    .scroll-box {
+      background-color: #e74c3c;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    /* Efecto de desplazamiento */
+    .scroll-box:before {
+      content: 'Scroll';
+      display: block;
+    }
+
+    /* Efecto de desplazamiento simple con animación */
+    @keyframes slide {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-50px);
+      }
+    }
+
+    .scroll-box {
+      animation: slide 5s linear infinite alternate;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de Animaciones en CSS</h1>
+
+  <!-- Ejemplo de animación con keyframes -->
+  <div class="example">
+    <h2>Ejemplo 1: Animación de rebote (keyframes)</h2>
+    <div class="animated-box">Rebote</div>
+  </div>
+
+  <!-- Ejemplo de transición de hover -->
+  <div class="example">
+    <h2>Ejemplo 2: Transición de escala al pasar el ratón</h2>
+    <div class="transition-box">Hover</div>
+  </div>
+
+  <!-- Ejemplo de animación de desplazamiento simple -->
+  <div class="example">
+    <h2>Ejemplo 3: Animación de desplazamiento</h2>
+    <div class="scroll-box">Scroll</div>
+  </div>
+</body>
+</html>

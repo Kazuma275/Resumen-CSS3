@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capítulo 5: Técnicas Avanzadas en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .example {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .code {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .code p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Capítulo 5: Técnicas Avanzadas en CSS</h1>
+
+  <!-- 5.1 Imágenes embebidas -->
+  <div class="example">
+    <h2>5.1 Imágenes embebidas</h2>
+    <p>Las imágenes embebidas se pueden incluir en CSS usando la propiedad `background-image` con la URL de la imagen codificada en base64. Esto ayuda a reducir las solicitudes de red y mejora el rendimiento en algunos casos.</p>
+    <div class="code">
+      <p>/* Ejemplo de imagen embebida */</p>
+      <p>div {</p>
+      <p>  width: 200px;</p>
+      <p>  height: 200px;</p>
+      <p>  background-image: url('data:image/png;base64,...');</p>
+      <p>  background-size: cover;</p>
+      <p>}</p>
+      <p>/* Utiliza la imagen codificada en base64 como fondo */</p>
+    </div>
+  </div>
+
+  <!-- 5.2 Mapas de imagen -->
+  <div class="example">
+    <h2>5.2 Mapas de imagen</h2>
+    <p>Los mapas de imagen se usan para definir áreas clicables dentro de una imagen. Se crean con la etiqueta `<map>` y se asocian con la imagen usando `usemap`.</p>
+    <div class="code">
+      <p>/* Ejemplo de mapa de imagen */</p>
+      <p><img src="imagen.jpg" usemap="#mapa" alt="Mapa de imagen"></p>
+      <p><map name="mapa"></p>
+      <p>  <area shape="rect" coords="34,44,270,350" href="https://ejemplo.com" alt="Área 1"></p>
+      <p>  <area shape="circle" coords="300,100,50" href="https://otroejemplo.com" alt="Área 2"></p>
+      <p></map></p>
+      <p>/* Crea áreas clicables dentro de la imagen */</p>
+    </div>
+  </div>
+
+  <!-- 5.3 Control del Scroll -->
+  <div class="example">
+    <h2>5.3 Control del Scroll</h2>
+    <p>Se pueden aplicar técnicas de control de desplazamiento en CSS para modificar la apariencia de los elementos al hacer scroll, como el efecto `scroll-behavior` para cambiar el comportamiento de desplazamiento.</p>
+    <div class="code">
+      <p>/* Ejemplo de scroll-behavior */</p>
+      <p>html {</p>
+      <p>  scroll-behavior: smooth;</p>
+      <p>}</p>
+      <p>/* Aplica desplazamiento suave a toda la página */</p>
+    </div>
+  </div>
+
+  <!-- 5.4 Variables CSS -->
+  <div class="example">
+    <h2>5.4 Variables CSS</h2>
+    <p>Las variables CSS permiten almacenar valores reutilizables que se pueden utilizar en todo el documento. Se definen con `--nombre-variable` y se usan con `var()`.</p>
+    <div class="code">
+      <p>/* Ejemplo de variables CSS */</p>
+      <p>:root {</p>
+      <p>  --color-principal: #3498db;</p>
+      <p>  --fuente-principal: 'Arial', sans-serif;</p>
+      <p>}</p>
+      <p>body {</p>
+      <p>  background-color: var(--color-principal);</p>
+      <p>  font-family: var(--fuente-principal);</p>
+      <p>}</p>
+      <p>/* Usa las variables definidas en el documento */</p>
+    </div>
+  </div>
+
+  <!-- 5.5 La función calc() -->
+  <div class="example">
+    <h2>5.5 La función calc()</h2>
+    <p>La función `calc()` permite realizar cálculos dinámicos en las propiedades de CSS, como sumar, restar, multiplicar o dividir valores.</p>
+    <div class="code">
+      <p>/* Ejemplo de la función calc() */</p>
+      <p>div {</p>
+      <p>  width: calc(100% - 50px);</p>
+      <p>  height: 200px;</p>
+      <p>}</p>
+      <p>/* Calcula el ancho restando 50px al 100% */</p>
+    </div>
+  </div>
+
+</body>
+</html>

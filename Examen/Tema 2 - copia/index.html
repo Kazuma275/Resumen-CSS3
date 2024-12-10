@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buenas Prácticas en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .example {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .code {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .code p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Buenas Prácticas en CSS</h1>
+
+  <!-- 2.1 Inicializar los estilos -->
+  <div class="example">
+    <h2>2.1 Inicializar los Estilos</h2>
+    <p>Es recomendable usar un "reset" o "normalize" CSS para asegurar que todos los elementos tengan un estilo consistente en todos los navegadores.</p>
+    <div class="code">
+      <p>/* Ejemplo de un reset CSS básico */</p>
+      <p>body, h1, h2, h3, p, ul, ol, li, a, div, span {</p>
+      <p>  margin: 0;</p>
+      <p>  padding: 0;</p>
+      <p>  box-sizing: border-box;</p>
+      <p>}</p>
+    </div>
+  </div>
+
+  <!-- 2.2 Comprobar el diseño en varios navegadores -->
+  <div class="example">
+    <h2>2.2 Comprobar el Diseño en Varios Navegadores</h2>
+    <p>Es importante probar el diseño en diferentes navegadores para asegurarse de que el diseño se vea y funcione correctamente. Herramientas como BrowserStack y el modo de inspección de los navegadores son útiles.</p>
+  </div>
+
+  <!-- 2.3 Mejora progresiva -->
+  <div class="example">
+    <h2>2.3 Mejora Progresiva</h2>
+    <p>La mejora progresiva implica construir una base de funcionalidad sólida y luego añadir características avanzadas solo para los navegadores que las soporten.</p>
+    <div class="code">
+      <p>/* Ejemplo de uso de flexbox como base */</p>
+      <p>display: flex;</p>
+    </div>
+  </div>
+
+  <!-- 2.4 Depuración -->
+  <div class="example">
+    <h2>2.4 Depuración</h2>
+    <p>Utilizar herramientas de desarrollo en los navegadores (como Chrome DevTools) para inspeccionar, modificar y probar el código en tiempo real.</p>
+  </div>
+
+  <!-- 2.5 Hojas de estilos -->
+  <div class="example">
+    <h2>2.5 Hojas de Estilos</h2>
+    <p>Es importante organizar las hojas de estilo de forma modular, dividiéndolas en varios archivos si es necesario y usando la metodología de importación de CSS.</p>
+    <div class="code">
+      <p>/* Ejemplo de importación de CSS */</p>
+      <p>@import url('estilos-base.css');</p>
+      <p>@import url('estilos-componentes.css');</p>
+    </div>
+  </div>
+
+  <!-- 2.6 Consistencia y Legibilidad -->
+  <div class="example">
+    <h2>2.6 Consistencia y Legibilidad</h2>
+    <p>Usar una convención de nombres consistente y formatear el código de manera legible para que sea fácil de mantener. Se recomienda seguir una metodología como BEM (Block Element Modifier).</p>
+    <div class="code">
+      <p>/* Ejemplo de metodología BEM */</p>
+      <p>.button {</p>
+      <p>  background-color: blue;</p>
+      <p>}</p>
+      <p>.button--primary {</p>
+      <p>  border: 2px solid blue;</p>
+      <p>}</p>
+    </div>
+  </div>
+
+  <!-- 2.7 Mantenibilidad -->
+  <div class="example">
+    <h2>2.7 Mantenibilidad</h2>
+    <p>Es crucial estructurar el código de manera que sea fácil de mantener y actualizar, como usar comentarios claros y dividir los estilos en archivos temáticos.</p>
+  </div>
+
+  <!-- 2.8 Herramientas y metodologías para optimizar CSS -->
+  <div class="example">
+    <h2>2.8 Herramientas y Metodologías para Optimizar CSS</h2>
+    <p>Usar herramientas como PostCSS y metodologías como SMACSS o BEM para escribir CSS más eficiente y modular.</p>
+    <div class="code">
+      <p>/* Ejemplo de uso de PostCSS */</p>
+      <p>npm install postcss-cli</p>
+      <p>postcss styles.css -o styles.min.css</p>
+    </div>
+  </div>
+
+  <!-- 2.9 Rendimiento -->
+  <div class="example">
+    <h2>2.9 Rendimiento</h2>
+    <p>Optimizar el rendimiento de CSS minimizando el código, eliminando CSS no utilizado (usando herramientas como PurifyCSS o UnCSS), y cargando CSS de forma asincrónica si es posible.</p>
+    <div class="code">
+      <p>/* Ejemplo de carga asíncrona */</p>
+      <p>&lt;link rel="stylesheet" href="estilos.css" media="print" onload="this.onload=null;this.onload=()=>{this.onload=null;this.rel='stylesheet'}"&gt;</p>
+    </div>
+  </div>
+
+</body>
+</html>

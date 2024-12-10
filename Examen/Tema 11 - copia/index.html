@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Responsive Design</title>
+  <style>
+    /* Estilo base */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .example {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Ejemplo 1: Diseño básico con media queries */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 20px;
+    }
+
+    .grid-item {
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      border-radius: 8px;
+    }
+
+    /* Media query para pantallas de hasta 768px */
+    @media screen and (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Media query para pantallas de hasta 480px */
+    @media screen and (max-width: 480px) {
+      .grid-item {
+        font-size: 0.9rem;
+        padding: 10px;
+      }
+    }
+
+    /* Ejemplo 2: Cambiar tamaño de imágenes y texto */
+    .responsive-text img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .responsive-text h2 {
+      font-size: 2rem;
+      color: #333;
+    }
+
+    @media screen and (max-width: 768px) {
+      .responsive-text h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .responsive-text h2 {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* Ejemplo 3: Mostrar u ocultar elementos */
+    .hidden-on-mobile {
+      display: block;
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .hidden-on-mobile-only {
+      display: none;
+      background-color: #ff5722;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .hidden-on-mobile {
+        display: none;
+      }
+      .hidden-on-mobile-only {
+        display: block;
+      }
+    }
+
+    /* Ejemplo 4: Diseño fluido con flexbox */
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .flex-item {
+      background-color: #2196f3;
+      color: white;
+      padding: 20px;
+      flex: 1 1 30%; /* Ajusta el tamaño de los elementos */
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 768px) {
+      .flex-item {
+        flex: 1 1 45%; /* Ajusta el tamaño de los elementos */
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .flex-item {
+        flex: 1 1 100%; /* Ocupa todo el ancho */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de Responsive Design con @media</h1>
+
+  <!-- Ejemplo 1: Diseño básico con media queries -->
+  <div class="example">
+    <h2>Ejemplo 1: Diseño básico con media queries</h2>
+    <div class="grid-container">
+      <div class="grid-item">Elemento 1</div>
+      <div class="grid-item">Elemento 2</div>
+    </div>
+  </div>
+
+  <!-- Ejemplo 2: Cambiar tamaño de imágenes y texto -->
+  <div class="example">
+    <h2>Ejemplo 2: Cambiar tamaño de imágenes y texto</h2>
+    <div class="responsive-text">
+      <h2>Título Responsivo</h2>
+      <img src="https://via.placeholder.com/600x300" alt="Imagen ejemplo">
+    </div>
+  </div>
+
+  <!-- Ejemplo 3: Mostrar u ocultar elementos -->
+  <div class="example">
+    <h2>Ejemplo 3: Mostrar u ocultar elementos</h2>
+    <div class="hidden-on-mobile">Visible solo en pantallas grandes</div>
+    <div class="hidden-on-mobile-only">Visible solo en pantallas pequeñas</div>
+  </div>
+
+  <!-- Ejemplo 4: Diseño fluido con flexbox -->
+  <div class="example">
+    <h2>Ejemplo 4: Diseño fluido con flexbox</h2>
+    <div class="flex-container">
+      <div class="flex-item">Elemento 1</div>
+      <div class="flex-item">Elemento 2</div>
+      <div class="flex-item">Elemento 3</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capítulo 4: Control del Espacio en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .example {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .code {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .code p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Capítulo 4: Control del Espacio en CSS</h1>
+
+  <!-- 4.1 Propiedad white-space -->
+  <div class="example">
+    <h2>4.1 Propiedad white-space</h2>
+    <p>La propiedad `white-space` controla cómo se gestionan los espacios en blanco dentro de un elemento. Se puede usar para evitar el ajuste de línea, preservar los espacios o manejar el contenido de forma especial.</p>
+    <div class="code">
+      <p>/* Ejemplo de white-space */</p>
+      <p>p.no-wrap {</p>
+      <p>  white-space: nowrap;</p>
+      <p>}</p>
+      <p>/* El contenido de este <p> no se ajustará en varias líneas */</p>
+    </div>
+  </div>
+
+  <!-- 4.2 Propiedad display -->
+  <div class="example">
+    <h2>4.2 Propiedad display</h2>
+    <p>La propiedad `display` controla el tipo de visualización de un elemento. Se puede usar para convertir un elemento en un bloque, en línea o en otros tipos como `grid` o `flex`.</p>
+    <div class="code">
+      <p>/* Ejemplo de display */</p>
+      <p>div {</p>
+      <p>  display: block;</p>
+      <p>}</p>
+      <p>/* Un <div> se comporta como un bloque */</p>
+      <p>span {</p>
+      <p>  display: inline;</p>
+      <p>}</p>
+      <p>/* Un <span> se comporta como un elemento en línea */</p>
+    </div>
+  </div>
+
+  <!-- 4.3 Propiedad outline -->
+  <div class="example">
+    <h2>4.3 Propiedad outline</h2>
+    <p>La propiedad `outline` se utiliza para dibujar un borde alrededor de un elemento sin afectar su tamaño o disposición. A menudo se usa para resaltar elementos de forma accesible.</p>
+    <div class="code">
+      <p>/* Ejemplo de outline */</p>
+      <p>button {</p>
+      <p>  outline: 2px solid red;</p>
+      <p>}</p>
+      <p>/* Agrega un borde alrededor del botón */</p>
+    </div>
+  </div>
+
+  <!-- 4.4 BOX-SIZING -->
+  <div class="example">
+    <h2>4.4 BOX-SIZING</h2>
+    <p>La propiedad `box-sizing` controla cómo se calculan las dimensiones de un elemento. Con `border-box`, el padding y el borde se incluyen en el tamaño total del elemento.</p>
+    <div class="code">
+      <p>/* Ejemplo de box-sizing */</p>
+      <p>div {</p>
+      <p>  box-sizing: border-box;</p>
+      <p>  width: 100px;</p>
+      <p>  padding: 10px;</p>
+      <p>}</p>
+      <p>/* El tamaño total será 100px, incluyendo padding y borde */</p>
+    </div>
+  </div>
+
+  <!-- 4.5 Espacio adyacente: La propiedad shape-outside -->
+  <div class="example">
+    <h2>4.5 Espacio adyacente: La propiedad shape-outside</h2>
+    <p>La propiedad `shape-outside` permite definir una forma alrededor de un elemento de texto para que el texto fluya alrededor de él. Es útil para crear diseños visuales avanzados.</p>
+    <div class="code">
+      <p>/* Ejemplo de shape-outside */</p>
+      <p>.imagen {</p>
+      <p>  float: left;</p>
+      <p>  shape-outside: circle(50%);</p>
+      <p>  width: 150px;</p>
+      <p>  height: 150px;</p>
+      <p>  clip-path: circle(50%);</p>
+      <p>}</p>
+      <p>/* Crea una imagen circular que rodea el texto */</p>
+    </div>
+  </div>
+
+  <!-- 4.6 Recorte con una forma concreta: La propiedad clip-path -->
+  <div class="example">
+    <h2>4.6 Recorte con una forma concreta: La propiedad clip-path</h2>
+    <p>La propiedad `clip-path` permite recortar un elemento con una forma específica, como un círculo, polígono o elipse, creando un efecto visual único.</p>
+    <div class="code">
+      <p>/* Ejemplo de clip-path */</p>
+      <p>.cuadro {</p>
+      <p>  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);</p>
+      <p>  width: 200px;</p>
+      <p>  height: 200px;</p>
+      <p>  background-color: lightblue;</p>
+      <p>}</p>
+      <p>/* Recorta el elemento en forma de triángulo */</p>
+    </div>
+  </div>
+
+</body>
+</html>

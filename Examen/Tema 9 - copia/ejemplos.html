@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Flexbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .example {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .flex-container {
+      display: flex;
+      margin: 20px 0;
+    }
+
+    .flex-item {
+      background-color: #3498db;
+      color: #fff;
+      margin: 5px;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      flex: 1;
+    }
+
+    /* Ejemplo de flex-direction */
+    .flex-direction {
+      flex-direction: row; /* Cambia a 'column' o 'row-reverse' para probar otros modos */
+    }
+
+    /* Ejemplo de flex-wrap */
+    .flex-wrap {
+      flex-wrap: wrap; /* Cambia a 'nowrap' o 'wrap-reverse' para otros modos */
+    }
+
+    /* Ejemplo de align-items */
+    .align-items {
+      align-items: center; /* Cambia a 'flex-start', 'flex-end', 'stretch', 'baseline' */
+    }
+
+    /* Ejemplo de justify-content */
+    .justify-content {
+      justify-content: space-around; /* Cambia a 'flex-start', 'flex-end', 'center', 'space-between' */
+    }
+
+    /* Ejemplo de align-content */
+    .align-content {
+      flex-wrap: wrap;
+      align-content: space-between; /* Cambia a 'flex-start', 'flex-end', 'center', 'stretch' */
+    }
+
+    /* Ejemplo de align-self */
+    .align-self {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .align-self .flex-item:nth-child(1) {
+      align-self: flex-start; /* Cambia a 'flex-end', 'center', 'stretch', 'baseline' */
+    }
+
+    .align-self .flex-item:nth-child(2) {
+      align-self: center;
+    }
+
+    .align-self .flex-item:nth-child(3) {
+      align-self: flex-end;
+    }
+
+    /* Ejemplo de flex */
+    .flex {
+      display: flex;
+    }
+
+    .flex .flex-item {
+      flex: 2; /* Cambia el valor para probar otros tamaños */
+    }
+
+    /* Ejemplo de order */
+    .order {
+      display: flex;
+    }
+
+    .order .flex-item:nth-child(1) {
+      order: 3; /* Cambia los valores para probar otros órdenes */
+    }
+
+    .order .flex-item:nth-child(2) {
+      order: 1;
+    }
+
+    .order .flex-item:nth-child(3) {
+      order: 2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de Flexbox</h1>
+
+  <!-- Ejemplo de flex-direction -->
+  <div class="example">
+    <h2>Ejemplo 9.2: La propiedad flex-direction</h2>
+    <div class="flex-container flex-direction">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </div>
+
+  <!-- Ejemplo de flex-wrap -->
+  <div class="example">
+    <h2>Ejemplo 9.3: La propiedad flex-wrap</h2>
+    <div class="flex-container flex-wrap">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+      <div class="flex-item">Item 4</div>
+    </div>
+  </div>
+
+  <!-- Ejemplo de align-items -->
+  <div class="example">
+    <h2>Ejemplo 9.4: La propiedad align-items</h2>
+    <div class="flex-container align-items">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </div>
+
+  <!-- Ejemplo de justify-content -->
+  <div class="example">
+    <h2>Ejemplo 9.5: La propiedad justify-content</h2>
+    <div class="flex-container justify-content">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </div>
+
+  <!-- Ejemplo de align-content -->
+  <div class="example">
+    <h2>Ejemplo 9.6: La propiedad align-content</h2>
+    <div class="flex-container align-content">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+      <div class="flex-item">Item 4</div>
+    </div>
+  </div>
+
+  <!-- Ejemplo de align-self -->
+  <div class="example">
+    <h2>Ejemplo 9.7: La propiedad align-self</h2>
+    <div class="flex-container align-self">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </div>
+
+  <!-- Ejemplo de flex -->
+  <div class="example">
+    <h2>Ejemplo 9.8: La propiedad flex</h2>
+    <div class="flex-container flex">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </div>
+
+  <!-- Ejemplo de order -->
+  <div class="example">
+    <h2>Ejemplo 9.9: La propiedad order</h2>
+    <div class="flex-container order">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </div>
+</body>
+</html>
