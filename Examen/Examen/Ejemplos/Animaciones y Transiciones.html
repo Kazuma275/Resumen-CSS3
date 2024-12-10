@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones y Transiciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* Ejemplo de transición */
+        .transition-box {
+            width: 150px;
+            height: 150px;
+            background-color: #3498db;
+            transition: all 0.5s ease-in-out;
+            margin: 20px;
+        }
+
+        .transition-box:hover {
+            background-color: #2980b9;
+            transform: scale(1.2);
+        }
+
+        /* Ejemplo de animación */
+        .animation-box {
+            width: 150px;
+            height: 150px;
+            background-color: #2ecc71;
+            animation: bounce 2s infinite ease-in-out;
+            margin: 20px;
+        }
+
+        /* Keyframes para la animación */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        /* Animación con varios estados */
+        .multi-state {
+            width: 150px;
+            height: 150px;
+            background-color: #e74c3c;
+            animation: colorChange 3s infinite alternate;
+            margin: 20px;
+        }
+
+        @keyframes colorChange {
+            0% {
+                background-color: #e74c3c;
+            }
+            100% {
+                background-color: #9b59b6;
+            }
+        }
+
+        /* Animación con retraso y duración personalizada */
+        .delayed-animation {
+            width: 150px;
+            height: 150px;
+            background-color: #f39c12;
+            animation: slideIn 1.5s ease-in 0.5s forwards;
+            margin: 20px;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de Animaciones y Transiciones</h1>
+    <a href="../index.html">Inicio</a>
+    <a href="./index.html">Ejemplos</a>
+
+    <!-- Ejemplo de transición -->
+    <div class="transition-box">Transición</div>
+
+    <!-- Ejemplo de animación simple -->
+    <div class="animation-box">Animación</div>
+
+    <!-- Ejemplo de animación de múltiples estados -->
+    <div class="multi-state">Cambio de color</div>
+
+    <!-- Ejemplo de animación con retraso -->
+    <div class="delayed-animation">Animación con retraso</div>
+</body>
+</html>

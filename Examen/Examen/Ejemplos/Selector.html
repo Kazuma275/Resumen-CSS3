@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Selectores Avanzados en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+
+    /* Selector de hijo directo */
+    .container > p {
+      color: #333;
+      font-size: 18px;
+    }
+
+    /* Selector de pseudo-clase :hover */
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Selector de pseudo-clase :nth-child */
+    .list-item:nth-child(odd) {
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    .list-item:nth-child(even) {
+      background-color: #2ecc71;
+      color: white;
+    }
+
+    /* Selector de pseudo-clase :first-child y :last-child */
+    .container p:first-child {
+      font-weight: bold;
+    }
+
+    .container p:last-child {
+      font-style: italic;
+    }
+
+    /* Selector de pseudo-elemento ::before */
+    .quote::before {
+      content: '“';
+      font-size: 40px;
+      color: #3498db;
+      margin-right: 10px;
+    }
+
+    /* Selector de pseudo-elemento ::after */
+    .quote::after {
+      content: '”';
+      font-size: 40px;
+      color: #3498db;
+      margin-left: 10px;
+    }
+
+    /* Selector de pseudo-elemento ::first-letter */
+    .intro::first-letter {
+      font-size: 36px;
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    /* Selector de pseudo-elemento ::first-line */
+    .intro::first-line {
+      color: #3498db;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de Selectores Avanzados en CSS</h1>
+    <a href="../index.html">Inicio</a>
+    <a href="./index.html">Ejemplos</a>
+
+  <!-- Ejemplo de selector de hijo directo -->
+  <div class="container">
+    <p>Este es un párrafo dentro de la caja contenedora.</p>
+    <p>Otro párrafo con texto de ejemplo.</p>
+  </div>
+
+  <!-- Ejemplo de selector de pseudo-clase :hover -->
+  <a href="#" class="button">Hover para cambiar color</a>
+
+  <!-- Ejemplo de selector de pseudo-clase :nth-child -->
+  <ul>
+    <li class="list-item">Elemento 1</li>
+    <li class="list-item">Elemento 2</li>
+    <li class="list-item">Elemento 3</li>
+    <li class="list-item">Elemento 4</li>
+  </ul>
+
+  <!-- Ejemplo de selector de pseudo-clase :first-child y :last-child -->
+  <div class="container">
+    <p>Este es el primer párrafo de la caja contenedora.</p>
+    <p>Este es el segundo párrafo.</p>
+    <p>Este es el último párrafo de la caja contenedora.</p>
+  </div>
+
+  <!-- Ejemplo de selector de pseudo-elemento ::before y ::after -->
+  <blockquote class="quote">La práctica hace al maestro.</blockquote>
+
+  <!-- Ejemplo de selector de pseudo-elemento ::first-letter y ::first-line -->
+  <p class="intro">La primera letra y la primera línea de este párrafo se estilizan de forma especial.</p>
+</body>
+</html>

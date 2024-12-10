@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases y Pseudo-elementos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* Pseudoclase :hover */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Pseudoclase :nth-child */
+        .list-item:nth-child(odd) {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        .list-item:nth-child(even) {
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        /* Pseudoclase :first-child y :last-child */
+        .container p:first-child {
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .container p:last-child {
+            font-style: italic;
+            color: #9b59b6;
+        }
+
+        /* Pseudo-elemento ::before */
+        .quote::before {
+            content: '“';
+            font-size: 40px;
+            color: #3498db;
+            margin-right: 10px;
+        }
+
+        /* Pseudo-elemento ::after */
+        .quote::after {
+            content: '”';
+            font-size: 40px;
+            color: #3498db;
+            margin-left: 10px;
+        }
+
+        /* Pseudo-elemento ::first-letter */
+        .intro::first-letter {
+            font-size: 36px;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        /* Pseudo-elemento ::first-line */
+        .intro::first-line {
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        /* Pseudoclase :active */
+        .active-button:active {
+            background-color: #1abc9c;
+            transform: scale(0.95);
+        }
+
+        /* Pseudoclase :focus */
+        .input-field:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de Pseudoclases y Pseudo-elementos</h1>
+    <a href="../index.html">Inicio</a>
+    <a href="./index.html">Ejemplos</a>
+
+    <!-- Ejemplo de pseudoclase :hover -->
+    <a href="#" class="button">Hover para cambiar color</a>
+
+    <!-- Ejemplo de pseudoclase :nth-child -->
+    <ul>
+        <li class="list-item">Elemento 1</li>
+        <li class="list-item">Elemento 2</li>
+        <li class="list-item">Elemento 3</li>
+        <li class="list-item">Elemento 4</li>
+    </ul>
+
+    <!-- Ejemplo de pseudoclase :first-child y :last-child -->
+    <div class="container">
+        <p>Este es el primer párrafo de la caja contenedora.</p>
+        <p>Este es el segundo párrafo.</p>
+        <p>Este es el último párrafo de la caja contenedora.</p>
+    </div>
+
+    <!-- Ejemplo de pseudo-elementos ::before y ::after -->
+    <blockquote class="quote">La práctica hace al maestro.</blockquote>
+
+    <!-- Ejemplo de pseudo-elemento ::first-letter y ::first-line -->
+    <p class="intro">La primera letra y la primera línea de este párrafo se estilizan de forma especial.</p>
+
+    <!-- Ejemplo de pseudoclase :active -->
+    <button class="button active-button">Presiona aquí</button>
+
+    <!-- Ejemplo de pseudoclase :focus -->
+    <input type="text" class="input-field" placeholder="Haz clic aquí para enfocar">
+</body>
+</html>

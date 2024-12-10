@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Avanzado y Completo</title>
+  <style>
+    /* Ejemplo de selector avanzado */
+    p:not(.highlight) {
+      color: gray;
+    }
+
+    /* Selector de atributos */
+    input[type="text"] {
+      border: 2px solid #3498db;
+      padding: 5px;
+      width: 200px;
+    }
+
+    /* Ejemplo de unidades de visualización */
+    .responsive-box {
+      width: 50vw;
+      height: 30vh;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 30vh;
+    }
+
+    /* Ejemplo de unidades relativas */
+    .text-example {
+      font-size: 2rem;
+    }
+
+    /* Uso de variables con fallbacks */
+    :root {
+      --main-color: #3498db;
+    }
+
+    .colored-box {
+      background-color: var(--main-color, #e74c3c); /* Fallback */
+      color: white;
+      padding: 20px;
+    }
+
+    /* Flexbox avanzado */
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 10px;
+    }
+
+    .flex-item {
+      flex: 1 1 200px;
+      background-color: #95a5a6;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Media queries avanzadas */
+    @media (min-width: 768px) and (orientation: landscape) {
+      .responsive-box {
+        background-color: lightgreen;
+      }
+    }
+
+    /* Animaciones avanzadas */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .animated-box {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      animation: bounce 1s infinite;
+    }
+
+    /* Uso de animation-fill-mode y animation-direction */
+    .reverse-animation {
+      animation: bounce 1s infinite reverse;
+      animation-fill-mode: both;
+    }
+
+    /* Sombra de caja avanzada */
+    .shadow-box {
+      width: 150px;
+      height: 150px;
+      background-color: #e74c3c;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.5);
+    }
+
+    /* Uso de opacidad */
+    .opacity-box {
+      width: 100px;
+      height: 100px;
+      background-color: #2ecc71;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de CSS Avanzado y Completo</h1>
+  <a href="../index.html">Inicio</a>
+  <a href="./index.html">Ejemplos</a>
+
+  <!-- Ejemplo de selector avanzado -->
+  <p class="highlight">Este párrafo tiene la clase highlight.</p>
+  <p>No tiene la clase y se verá en color gris.</p>
+
+  <!-- Ejemplo de selector de atributos -->
+  <input type="text" placeholder="Texto de ejemplo">
+
+  <!-- Ejemplo de unidades de visualización -->
+  <div class="responsive-box">50vw / 30vh</div>
+
+  <!-- Ejemplo de unidades relativas -->
+  <div class="text-example">Texto con font-size en rem</div>
+
+  <!-- Ejemplo de uso de variables con fallbacks -->
+  <div class="colored-box">Caja con color de variable</div>
+
+  <!-- Ejemplo de flexbox avanzado -->
+  <div class="flex-container">
+    <div class="flex-item">Elemento 1</div>
+    <div class="flex-item">Elemento 2</div>
+    <div class="flex-item">Elemento 3</div>
+  </div>
+
+  <!-- Ejemplo de media queries avanzadas -->
+  <div class="responsive-box">Responsive con media query</div>
+
+  <!-- Ejemplo de animación avanzada -->
+  <div class="animated-box">Animación de rebote</div>
+  <div class="reverse-animation">Animación de rebote inverso</div>
+
+  <!-- Ejemplo de sombra de caja avanzada -->
+  <div class="shadow-box">Caja con sombra avanzada</div>
+
+  <!-- Ejemplo de opacidad -->
+  <div class="opacity-box">Caja con opacidad</div>
+</body>
+</html>

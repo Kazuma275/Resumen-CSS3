@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Medida en CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* Ejemplo de unidades absolutas */
+        .unit-absolute {
+            margin: 20px;
+            padding: 15px;
+            width: 200px;
+            height: 100px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            border: 2px solid #3498db;
+            font-size: 16px; /* px (píxeles) */
+        }
+
+        /* Ejemplo de unidades relativas */
+        .unit-relative {
+            margin: 2rem;
+            padding: 1rem;
+            width: 50%; /* Porcentaje */
+            height: 50vh; /* Vista del alto de la pantalla */
+            background-color: #9b59b6;
+            color: #ecf0f1;
+            border: 2px solid #e74c3c;
+            font-size: 1.5em; /* em (relativo al tamaño de la fuente del elemento padre) */
+        }
+
+        /* Ejemplo de unidades de vista */
+        .unit-vh-vw {
+            margin: 2vw;
+            padding: 1vh;
+            width: 80vw; /* Porcentaje del ancho de la vista */
+            height: 50vh; /* Porcentaje de la altura de la vista */
+            background-color: #f1c40f;
+            color: #2c3e50;
+            border: 2px solid #1abc9c;
+            font-size: 1vw; /* Unidad relativa al ancho de la vista */
+        }
+
+        /* Ejemplo de unidades de fuente */
+        .unit-font {
+            font-size: 2rem; /* rem (relativo a la raíz de la página) */
+            line-height: 1.5; /* Línea de altura en unidades relativas */
+            color: #e67e22;
+            margin-bottom: 20px;
+        }
+
+        /* Ejemplo de unidades de tiempo */
+        .unit-time {
+            animation: example 3s infinite;
+        }
+
+        @keyframes example {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* Ejemplo de unidades de ángulo */
+        .unit-angle {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            transform: rotate(45deg); /* Grados */
+            margin-bottom: 20px;
+        }
+
+        /* Ejemplo de unidades de tamaño de contenedor */
+        .unit-flex {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+        }
+
+        .unit-flex div {
+            width: 20vw; /* Unidad relativa al ancho de la vista */
+            height: 20vh; /* Unidad relativa a la altura de la vista */
+            background-color: #2ecc71;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de Unidades de Medida en CSS</h1>
+    <a href="../index.html">Inicio</a>
+    <a href="./index.html">Ejemplos</a>
+
+    <!-- Ejemplo de unidades absolutas -->
+    <div class="unit-absolute">Unidad Absoluta (px)</div>
+
+    <!-- Ejemplo de unidades relativas -->
+    <div class="unit-relative">Unidad Relativa (em, %)</div>
+
+    <!-- Ejemplo de unidades de vista -->
+    <div class="unit-vh-vw">Unidad de Vista (vw, vh)</div>
+
+    <!-- Ejemplo de unidades de fuente -->
+    <div class="unit-font">Unidad de Fuente (rem)</div>
+
+    <!-- Ejemplo de unidades de tiempo -->
+    <div class="unit-time">Animación con Unidad de Tiempo (s)</div>
+
+    <!-- Ejemplo de unidades de ángulo -->
+    <div class="unit-angle">Unidad de Ángulo (deg)</div>
+
+    <!-- Ejemplo de unidades de tamaño de contenedor -->
+    <div class="unit-flex">
+        <div>20vw x 20vh</div>
+        <div>20vw x 20vh</div>
+        <div>20vw x 20vh</div>
+    </div>
+</body>
+</html>

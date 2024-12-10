@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Uso de display: block</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Barra de navegación */
+    .navbar {
+      display: block;
+      background-color: #3498db;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    .navbar a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contenedor principal */
+    .main-container {
+      display: block;
+      padding: 20px;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
+    /* Cajas de contenido */
+    .box {
+      display: block;
+      background-color: #e74c3c;
+      color: white;
+      margin: 10px 0;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .box:nth-child(even) {
+      background-color: #2ecc71;
+    }
+
+    /* Pie de página */
+    .footer {
+      display: block;
+      background-color: #2c3e50;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+    <h1>Block</h1>
+    <a href="../index.html">Inicio</a>
+    <a href="./index.html">Ejemplos</a>
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="logo">Logo</div>
+    <div class="links">
+      <a href="#">Inicio</a>
+      <a href="#">Servicios</a>
+      <a href="#">Acerca de</a>
+      <a href="#">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- Contenedor principal -->
+  <div class="main-container">
+    <div class="box">Caja 1</div>
+    <div class="box">Caja 2</div>
+    <div class="box">Caja 3</div>
+    <div class="box">Caja 4</div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2024 Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>

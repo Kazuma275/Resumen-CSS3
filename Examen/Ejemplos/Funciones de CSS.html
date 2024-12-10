@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Funciones de CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* Ejemplo de función calc() */
+        .calc-example {
+            width: calc(100% - 40px); /* Ancho de 100% menos 40px de margen */
+            padding: 20px;
+            background-color: #e74c3c;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Ejemplo de función min() y max() */
+        .min-max-example {
+            width: min(50%, 300px); /* El ancho es el menor valor entre 50% de la pantalla y 300px */
+            height: max(200px, 30vh); /* La altura es el mayor valor entre 200px y 30% de la altura de la ventana */
+            padding: 15px;
+            background-color: #2ecc71;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Ejemplo de función clamp() */
+        .clamp-example {
+            font-size: clamp(1rem, 2vw + 1rem, 3rem); /* Tamaño de fuente adaptable entre 1rem y 3rem */
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Ejemplo de función var() */
+        :root {
+            --main-color: #9b59b6;
+        }
+        .var-example {
+            background-color: var(--main-color);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de Funciones de CSS</h1>
+    <a href="../index.html">Inicio</a>
+    <a href="./index.html">Ejemplos</a>
+    
+    <div class="calc-example">
+        Ejemplo de calc(): ancho con cálculo dinámico
+    </div>
+
+    <div class="min-max-example">
+        Ejemplo de min() y max(): ancho y altura adaptativos
+    </div>
+
+    <div class="clamp-example">
+        Ejemplo de clamp(): tamaño de fuente adaptable
+    </div>
+
+    <div class="var-example">
+        Ejemplo de var(): uso de variables CSS
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de ::target en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .section {
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f4f4f4;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    /* Estilo que se aplica cuando la sección es el objetivo */
+    .section:target {
+      background-color: #3498db;
+      color: white;
+      box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    }
+
+    a {
+      display: block;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: #3498db;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplo de ::target en CSS</h1>
+  <a href="../index.html">Inicio</a>
+  <a href="./index.html">Ejemplos</a>
+
+  <p>Haz clic en los enlaces para resaltar la sección correspondiente:</p>
+
+  <!-- Navegación -->
+  <a href="#section1">Ir a la Sección 1</a>
+  <a href="#section2">Ir a la Sección 2</a>
+  <a href="#section3">Ir a la Sección 3</a>
+
+  <!-- Secciones -->
+  <div id="section1" class="section">
+    <h2>Sección 1</h2>
+    <p>Esta es la primera sección. Al hacer clic en el enlace correspondiente, esta sección se resaltará con un nuevo estilo.</p>
+  </div>
+
+  <div id="section2" class="section">
+    <h2>Sección 2</h2>
+    <p>Esta es la segunda sección. Al hacer clic en el enlace correspondiente, esta sección se resaltará con un nuevo estilo.</p>
+  </div>
+
+  <div id="section3" class="section">
+    <h2>Sección 3</h2>
+    <p>Esta es la tercera sección. Al hacer clic en el enlace correspondiente, esta sección se resaltará con un nuevo estilo.</p>
+  </div>
+</body>
+</html>

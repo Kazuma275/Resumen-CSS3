@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries Avanzadas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Contenedor principal */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: #3498db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        /* Media query para pantallas de al menos 768px */
+        @media (min-width: 768px) {
+            .box {
+                width: 150px;
+                height: 150px;
+                font-size: 18px;
+                background-color: #2ecc71;
+            }
+        }
+
+        /* Media query para pantallas de al menos 1024px */
+        @media (min-width: 1024px) {
+            .container {
+                justify-content: space-around;
+            }
+            .box {
+                width: 200px;
+                height: 200px;
+                font-size: 20px;
+                background-color: #e74c3c;
+            }
+        }
+
+        /* Media query con características de orientación */
+        @media (min-width: 768px) and (orientation: landscape) {
+            .box {
+                background-color: #f39c12;
+                width: 180px;
+                height: 180px;
+                font-size: 20px;
+            }
+        }
+
+        /* Media query para pantallas pequeñas y alta resolución */
+        @media (max-width: 480px) and (min-resolution: 2dppx) {
+            .box {
+                background-color: #9b59b6;
+                width: 80px;
+                height: 80px;
+                font-size: 14px;
+            }
+        }
+
+        /* Media query con características de resolución */
+        @media (min-resolution: 192dpi) {
+            .box {
+                border: 3px solid #34495e;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de Media Queries Avanzadas</h1>
+    <a href="../index.html">Inicio</a>
+    <a href="./index.html">Ejemplos</a>
+    <div class="container">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+    </div>
+</body>
+</html>

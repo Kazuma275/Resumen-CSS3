@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Visibilidad de Elementos</title>
+  <style>
+    .visible {
+      background-color: lightgreen;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .invisible {
+      visibility: hidden; /* El elemento no es visible pero ocupa espacio */
+      background-color: lightcoral;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .block {
+      background-color: lightblue;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .none {
+      display: none; /* El elemento no es visible y no ocupa espacio */
+      background-color: lightpink;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .opaque {
+      background-color: lightgreen;
+      padding: 10px;
+      opacity: 1; /* Totalmente visible */
+      margin-bottom: 10px;
+    }
+
+    .transparent {
+      background-color: lightcoral;
+      padding: 10px;
+      opacity: 0.3; /* 30% de opacidad, 70% transparente */
+      margin-bottom: 10px;
+    }
+
+    .fading {
+      background-color: lightblue;
+      padding: 10px;
+      opacity: 0.5; /* Un 50% de opacidad */
+      transition: opacity 0.5s;
+      margin-bottom: 10px;
+    }
+
+    .fading:hover {
+      opacity: 1; /* Se hace completamente visible al pasar el cursor */
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de Visibilidad de Elementos en CSS</h1>
+  <a href="../index.html">Inicio</a>
+  <a href="./index.html">Ejemplos</a>
+
+  <!-- Ejemplo de uso de visibility -->
+  <div class="visible">Soy visible</div>
+  <div class="invisible">No soy visible, pero sigo ocupando espacio</div>
+
+  <!-- Ejemplo de uso de display -->
+  <div class="block">Soy un bloque visible</div>
+  <div class="none">Soy invisible y no ocupo espacio</div>
+
+  <!-- Ejemplo de uso de opacity -->
+  <div class="opaque">Soy opaco</div>
+  <div class="transparent">Soy transparente</div>
+
+  <!-- Ejemplo de combinación de display y opacity -->
+  <div class="fading">Me desvanezco pero ocupo espacio</div>
+</body>
+</html>

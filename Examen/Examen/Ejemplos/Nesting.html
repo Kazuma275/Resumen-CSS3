@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Nesting en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+
+    /* Anidamiento de estilos con la sintaxis de SCSS */
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+
+      /* Anidamiento de elementos dentro de .card */
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .content {
+        font-size: 16px;
+        color: #555;
+      }
+
+      /* Anidamiento de un elemento interactivo dentro de .card */
+      .button {
+        display: inline-block;
+        padding: 10px 15px;
+        margin-top: 15px;
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .button:hover {
+        background-color: #2980b9;
+      }
+    }
+
+    /* Anidamiento de un selector de clase de un elemento padre */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .card {
+        flex: 1 1 calc(33.333% - 20px);
+        box-sizing: border-box;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplo de Nesting en CSS</h1>
+  <a href="../index.html">Inicio</a>
+  <a href="./index.html">Ejemplos</a>
+
+  <!-- Contenedor con varias tarjetas -->
+  <div class="container">
+    <div class="card">
+      <h2 class="title">Tarjeta 1</h2>
+      <p class="content">Este es el contenido de la primera tarjeta.</p>
+      <a href="#" class="button">Leer más</a>
+    </div>
+
+    <div class="card">
+      <h2 class="title">Tarjeta 2</h2>
+      <p class="content">Este es el contenido de la segunda tarjeta.</p>
+      <a href="#" class="button">Leer más</a>
+    </div>
+
+    <div class="card">
+      <h2 class="title">Tarjeta 3</h2>
+      <p class="content">Este es el contenido de la tercera tarjeta.</p>
+      <a href="#" class="button">Leer más</a>
+    </div>
+  </div>
+</body>
+</html>

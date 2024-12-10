@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables y Custom Properties en CSS</title>
+    <style>
+        /* Definición de variables globales */
+        :root {
+            --main-bg-color: #3498db;
+            --main-text-color: #ffffff;
+            --padding: 20px;
+            --font-size: 16px;
+            --border-radius: 10px;
+            --primary-font: 'Arial', sans-serif;
+        }
+
+        body {
+            font-family: var(--primary-font);
+            margin: 0;
+            padding: var(--padding);
+            background-color: var(--main-bg-color);
+            color: var(--main-text-color);
+        }
+
+        .box {
+            width: 200px;
+            height: 150px;
+            background-color: var(--main-bg-color);
+            padding: var(--padding);
+            border-radius: var(--border-radius);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--main-text-color);
+            font-size: var(--font-size);
+        }
+
+        .box:hover {
+            background-color: #2ecc71; /* Cambio de color sin usar la variable */
+            transform: scale(1.05);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .custom-section {
+            background-color: var(--main-bg-color);
+            color: var(--main-text-color);
+            padding: var(--padding);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .custom-section p {
+            font-size: var(--font-size);
+        }
+
+        /* Ejemplo de uso de variables anidadas */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--padding);
+        }
+
+        .container div {
+            width: calc(33% - var(--padding));
+            padding: var(--padding);
+            background-color: var(--main-bg-color);
+            color: var(--main-text-color);
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de Variables y Custom Properties en CSS</h1>
+    <a href="../index.html">Inicio</a>
+    <a href="./index.html">Ejemplos</a>
+    
+    <div class="box">Caja de ejemplo</div>
+    <div class="custom-section">
+        <p>Sección con variables y propiedades personalizadas</p>
+    </div>
+    <div class="container">
+        <div>Elemento 1</div>
+        <div>Elemento 2</div>
+        <div>Elemento 3</div>
+    </div>
+</body>
+</html>

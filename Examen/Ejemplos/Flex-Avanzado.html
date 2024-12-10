@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Avanzado</title>
+    <style>
+        /* Contenedor principal */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+            justify-content: space-around; /* Espacio entre elementos */
+            align-items: center; /* Alineación vertical de elementos */
+            gap: 15px; /* Espacio entre elementos */
+            height: 100vh; /* Altura completa de la ventana */
+            border: 2px solid #333;
+            padding: 10px;
+        }
+
+        /* Elementos flexibles */
+        .flex-item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            flex-grow: 1; /* Permite que el elemento crezca */
+            flex-basis: 150px; /* Tamaño base del elemento */
+            flex-shrink: 1; /* Permite que el elemento se encoja */
+        }
+
+        .flex-item:nth-child(odd) {
+            background-color: #8BC34A;
+        }
+
+        /* Contenedor con flex-direction row-reverse */
+        .flex-container-reverse {
+            display: flex;
+            flex-direction: row-reverse; /* Invierte el orden de los elementos */
+            justify-content: flex-start;
+            gap: 15px;
+            border: 2px solid #333;
+            padding: 10px;
+        }
+
+        /* Contenedor con align-content */
+        .flex-container-multi {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between; /* Alinea múltiples líneas */
+            gap: 15px;
+            border: 2px solid #333;
+            padding: 10px;
+            height: 200px;
+        }
+
+        /* Elementos de contenedor multi */
+        .flex-item-multi {
+            background-color: #FF5722;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            flex: 1 1 100px; /* flex-grow, flex-shrink, flex-basis */
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de Flexbox Avanzado</h1>
+    <a href="../index.html">Inicio</a>
+    <a href="./index.html">Ejemplos</a>
+
+    <!-- Ejemplo 1: Contenedor con flex-wrap -->
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+    </div>
+
+    <!-- Ejemplo 2: Contenedor con flex-direction row-reverse -->
+    <div class="flex-container-reverse">
+        <div class="flex-item">A</div>
+        <div class="flex-item">B</div>
+        <div class="flex-item">C</div>
+        <div class="flex-item">D</div>
+    </div>
+
+    <!-- Ejemplo 3: Contenedor con align-content -->
+    <div class="flex-container-multi">
+        <div class="flex-item-multi">X</div>
+        <div class="flex-item-multi">Y</div>
+        <div class="flex-item-multi">Z</div>
+        <div class="flex-item-multi">W</div>
+        <div class="flex-item-multi">V</div>
+    </div>
+</body>
+</html>

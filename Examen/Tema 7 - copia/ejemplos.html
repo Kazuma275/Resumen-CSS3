@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos Avanzados de Animaciones en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .example {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .code {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .code p {
+      margin: 0;
+    }
+
+    /* Ejemplo 1: Animación de rebote */
+    .bouncing-box {
+      width: 100px;
+      height: 100px;
+      background-color: #1abc9c;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: bounce 1s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-30px);
+      }
+    }
+
+    /* Ejemplo 2: Animación de deslizamiento lateral */
+    .sliding-box {
+      width: 100px;
+      height: 100px;
+      background-color: #e67e22;
+      border-radius: 8px;
+      animation: slide 2s ease-in-out infinite;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(150px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    /* Ejemplo 3: Animación de escala */
+    .scaling-box {
+      width: 100px;
+      height: 100px;
+      background-color: #9b59b6;
+      border-radius: 8px;
+      animation: scale 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes scale {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.5);
+      }
+    }
+
+    /* Ejemplo 4: Animación de giro y escalado combinado */
+    .rotating-scaling-box {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      border-radius: 8px;
+      animation: rotateScale 3s linear infinite;
+    }
+
+    @keyframes rotateScale {
+      0% {
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        transform: rotate(180deg) scale(1.2);
+      }
+      100% {
+        transform: rotate(360deg) scale(1);
+      }
+    }
+
+    /* Ejemplo 5: Animación de color de fondo */
+    .color-changing-box {
+      width: 100px;
+      height: 100px;
+      background-color: #2ecc71;
+      border-radius: 8px;
+      animation: colorChange 2s linear infinite;
+    }
+
+    @keyframes colorChange {
+      0% {
+        background-color: #2ecc71;
+      }
+      50% {
+        background-color: #e74c3c;
+      }
+      100% {
+        background-color: #2ecc71;
+      }
+    }
+
+    /* Ejemplo 6: Animación de opacidad combinada con movimiento */
+    .fading-moving-box {
+      width: 100px;
+      height: 100px;
+      background-color: #f39c12;
+      border-radius: 8px;
+      animation: fadeMove 2s ease-in-out infinite;
+    }
+
+    @keyframes fadeMove {
+      0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      50% {
+        opacity: 0.5;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Ejemplo 7: Animación de rotación con retraso */
+    .delayed-rotation-box {
+      width: 100px;
+      height: 100px;
+      background-color: #8e44ad;
+      border-radius: 8px;
+      animation: delayedRotate 4s linear infinite;
+    }
+
+    @keyframes delayedRotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(90deg);
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      75% {
+        transform: rotate(270deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Ejemplo 8: Animación de trayectorias complejas */
+    .path-animation-box {
+      width: 100px;
+      height: 100px;
+      background-color: #d35400;
+      border-radius: 50%;
+      position: relative;
+      animation: pathAnimation 5s linear infinite;
+    }
+
+    @keyframes pathAnimation {
+      0% {
+        top: 0;
+        left: 0;
+      }
+      25% {
+        top: 0;
+        left: 150px;
+      }
+      50% {
+        top: 150px;
+        left: 150px;
+      }
+      75% {
+        top: 150px;
+        left: 0;
+      }
+      100% {
+        top: 0;
+        left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos Avanzados de Animaciones en CSS</h1>
+  <a href="../index.html">Inicio</a>
+
+  <!-- 1. Animación de rebote -->
+  <div class="example">
+    <h2>1. Animación de rebote</h2>
+    <p>Una animación que simula un rebote usando <code>translateY()</code>.</p>
+    <div class="code">
+      <p>/* Animación de rebote */</p>
+      <p>.bouncing-box {</p>
+      <p>  animation: bounce 1s cubic-bezier(0.25, 1, 0.5, 1) infinite;</p>
+      <p>}</p>
+      <p>@keyframes bounce {</p>
+      <p>  0%, 100% { transform: translateY(0); }</p>
+      <p>  50% { transform: translateY(-30px); }</p>
+      <p>}</p>
+    </div>
+    <div class="bouncing-box"></div>
+  </div>
+
+  <!-- 2. Animación de deslizamiento lateral -->
+  <div class="example">
+    <h2>2. Animación de deslizamiento lateral</h2>
+    <p>Una animación que mueve un elemento de izquierda a derecha.</p>
+    <div class="code">
+      <p>/* Animación de deslizamiento lateral */</p>
+      <p>.sliding-box {</p>
+      <p>  animation: slide 2s ease-in-out infinite;</p>
+      <p>}</p>
+      <p>@keyframes slide {</p>
+      <p>  0% { transform: translateX(0); }</p>
+      <p>  50% { transform: translateX(150px); }</p>
+      <p>  100% { transform: translateX(0); }</p>
+      <p>}</p>
+    </div>
+    <div class="sliding-box"></div>
+  </div>
+
+  <!-- 3. Animación de escala -->
+  <div class="example">
+    <h2>3. Animación de escala</h2>
+    <p>Una animación que cambia el tamaño de un elemento.</p>
+    <div class="code">
+      <p>/* Animación de escala */</p>
+      <p>.scaling-box {</p>
+      <p>  animation: scale 1.5s ease-in-out infinite alternate;</p>
+      <p>}</p>
+      <p>@keyframes scale {</p>
+      <p>  0% { transform: scale(1); }</p>
+      <p>  100% { transform: scale(1.5); }</p>
+      <p>}</p>
+    </div>
+    <div class="scaling-box"></div>
+  </div>
+
+  <!-- 4. Animación de giro y escalado combinado -->
+  <div class="example">
+    <h2>4. Animación de giro y escalado combinado</h2>
+    <p>Una animación que combina rotación y escalado.</p>
+    <div class="code">
+      <p>/* Animación de giro y escalado */</p>
+      <p>.rotating-scaling-box {</p>
+      <p>  animation: rotateScale 3s linear infinite;</p>
+      <p>}</p>
+      <p>@keyframes rotateScale {</p>
+      <p>  0% { transform: rotate(0deg) scale(1); }</p>
+      <p>  50% { transform: rotate(180deg) scale(1.2); }</p>
+      <p>  100% { transform: rotate(360deg) scale(1); }</p>
+      <p>}</p>
+    </div>
+    <div class="rotating-scaling-box"></div>
+  </div>
+
+  <!-- 5. Animación de cambio de color -->
+  <div class="example">
+    <h2>5. Animación de cambio de color</h2>
+    <p>Una animación que cambia el color de fondo de un elemento.</p>
+    <div class="code">
+      <p>/* Animación de cambio de color */</p>
+      <p>.color-changing-box {</p>
+      <p>  animation: colorChange 2s linear infinite;</p>
+      <p>}</p>
+      <p>@keyframes colorChange {</p>
+      <p>  0% { background-color: #2ecc71; }</p>
+      <p>  50% { background-color: #e74c3c; }</p>
+      <p>  100% { background-color: #2ecc71; }</p>
+      <p>}</p>
+    </div>
+    <div class="color-changing-box"></div>
+  </div>
+
+  <!-- 6. Animación de opacidad y movimiento -->
+  <div class="example">
+    <h2>6. Animación de opacidad y movimiento</h2>
+    <p>Una animación que cambia la opacidad y la posición de un elemento.</p>
+    <div class="code">
+      <p>/* Animación de opacidad y movimiento */</p>
+      <p>.fading-moving-box {</p>
+      <p>  animation: fadeMove 2s ease-in-out infinite;</p>
+      <p>}</p>
+      <p>@keyframes fadeMove {</p>
+      <p>  0% { opacity: 1; transform: translateY(0); }</p>
+      <p>  50% { opacity: 0.5; transform: translateY(-20px); }</p>
+      <p>  100% { opacity: 1; transform: translateY(0); }</p>
+      <p>}</p>
+    </div>
+    <div class="fading-moving-box"></div>
+  </div>
+
+  <!-- 7. Animación de rotación con retraso -->
+  <div class="example">
+    <h2>7. Animación de rotación con retraso</h2>
+    <p>Una animación de rotación que realiza giros completos.</p>
+    <div class="code">
+      <p>/* Animación de rotación con retraso */</p>
+      <p>.delayed-rotation-box {</p>
+      <p>  animation: delayedRotate 4s linear infinite;</p>
+      <p>}</p>
+      <p>@keyframes delayedRotate {</p>
+      <p>  0% { transform: rotate(0deg); }</p>
+      <p>  25% { transform: rotate(90deg); }</p>
+      <p>  50% { transform: rotate(180deg); }</p>
+      <p>  75% { transform: rotate(270deg); }</p>
+      <p>  100% { transform: rotate(360deg); }</p>
+      <p>}</p>
+    </div>
+    <div class="delayed-rotation-box"></div>
+  </div>
+
+  <!-- 8. Animación de trayectorias complejas -->
+  <div class="example">
+    <h2>8. Animación de trayectorias complejas</h2>
+    <p>Una animación que mueve un elemento en un camino específico.</p>
+    <div class="code">
+      <p>/* Animación de trayectorias complejas */</p>
+      <p>.path-animation-box {</p>
+      <p>  animation: pathAnimation 5s linear infinite;</p>
+      <p>}</p>
+      <p>@keyframes pathAnimation {</p>
+      <p>  0% { top: 0; left: 0; }</p>
+      <p>  25% { top: 0; left: 150px; }</p>
+      <p>  50% { top: 150px; left: 150px; }</p>
+      <p>  75% { top: 150px; left: 0; }</p>
+      <p>  100% { top: 0; left: 0; }</p>
+      <p>}</p>
+    </div>
+    <div class="path-animation-box"></div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Overflow</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            padding: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .content {
+            width: 100%;
+            height: 150px;
+            background-color: lightblue;
+            overflow: auto; /* Ajuste de desbordamiento general */
+        }
+
+        .content-x {
+            width: 100%;
+            white-space: nowrap; /* Evita que el texto se envuelva */
+            background-color: lightgreen;
+            overflow-x: scroll; /* Desplazamiento horizontal */
+        }
+
+        .content-x p {
+            display: inline-block; /* Hace que el contenido sea más ancho que el contenedor */
+            white-space: nowrap;
+        }
+
+        .content-y {
+            width: 100%;
+            height: 100px;
+            background-color: lightcoral;
+            overflow-y: scroll; /* Desplazamiento vertical */
+        }
+
+        .content-hidden {
+            width: 100%;
+            height: 100px;
+            background-color: lightgoldenrodyellow;
+            overflow: hidden; /* Sin desplazamiento, el contenido se oculta */
+        }
+
+        .content-visible {
+            width: 100%;
+            height: 100px;
+            background-color: lightgray;
+            overflow: visible; /* El contenido desbordado es visible */
+        }
+    </style>
+</head>
+<body>
+    <h2>Ejemplo de Overflow General</h2>
+    <a href="../index.html">Inicio</a>
+    <a href="./index.html">Ejemplos</a>
+    <div class="container">
+        <div class="content">
+            <p>Este es un contenido que puede desbordarse dependiendo de su tamaño. Intenta ajustar el tamaño de la ventana para ver cómo se comporta.</p>
+        </div>
+    </div>
+
+    <h2>Ejemplo de Overflow Horizontal (overflow-x)</h2>
+    <div class="container">
+        <div class="content-x">
+            <p>Contenido largo que desborda horizontalmente. Deberías poder desplazarte horizontalmente para ver todo el contenido. Este es un ejemplo de un contenido muy largo que debería provocar el desplazamiento horizontal.</p>
+        </div>
+    </div>
+
+    <h2>Ejemplo de Overflow Vertical (overflow-y)</h2>
+    <div class="container">
+        <div class="content-y">
+            <p>Este contenido desborda verticalmente. Deberías poder desplazarte hacia abajo para ver todo el contenido.</p>
+            <p>Más contenido para que se vea el desplazamiento.</p>
+            <p>Incluso más contenido para asegurarte de que el desplazamiento es necesario.</p>
+        </div>
+    </div>
+
+    <h2>Ejemplo de Overflow Oculto (overflow: hidden)</h2>
+    <div class="container">
+        <div class="content-hidden">
+            <p>Este contenido se corta y no se puede desplazar. El contenido desbordado es oculto.</p>
+        </div>
+    </div>
+
+    <h2>Ejemplo de Overflow Visible (overflow: visible)</h2>
+    <div class="container">
+        <div class="content-visible">
+            <p>Este contenido se extiende fuera del contenedor y es visible fuera de él.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Expresiones Regulares</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .example {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    code {
+      display: block;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: monospace;
+      overflow-x: auto;
+      margin: 10px 0;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de Expresiones Regulares</h1>
+    <a href="../index.html">Inicio</a>
+    <a href="./index.html">Ejemplos</a>
+  <!-- Ejemplo 1: Verificar si una cadena contiene solo números -->
+  <div class="example">
+    <h2>1. Verificar si una cadena contiene solo números</h2>
+    <p>Expresión regular para validar que una cadena tenga solo números (ej. "12345"):</p>
+    <code>/^\d+$/</code>
+    <p>Explicación:</p>
+    <ul>
+      <li><strong>^</strong>: Comienza desde el inicio de la cadena.</li>
+      <li><strong>\d+</strong>: Uno o más dígitos numéricos.</li>
+      <li><strong>$</strong>: Final de la cadena.</li>
+    </ul>
+  </div>
+
+  <!-- Ejemplo 2: Verificar si una cadena contiene solo letras -->
+  <div class="example">
+    <h2>2. Verificar si una cadena contiene solo letras</h2>
+    <p>Expresión regular para validar que una cadena tenga solo letras (ej. "abcde"):</p>
+    <code>/^[a-zA-Z]+$/</code>
+    <p>Explicación:</p>
+    <ul>
+      <li><strong>^</strong>: Comienza desde el inicio de la cadena.</li>
+      <li><strong>[a-zA-Z]+</strong>: Uno o más caracteres alfabéticos, tanto minúsculas como mayúsculas.</li>
+      <li><strong>$</strong>: Final de la cadena.</li>
+    </ul>
+  </div>
+
+  <!-- Ejemplo 3: Verificar si una cadena contiene un carácter específico -->
+  <div class="example">
+    <h2>3. Verificar si una cadena contiene un carácter específico (ej. "@" para correos)</h2>
+    <p>Expresión regular para comprobar si una cadena contiene el símbolo "@":</p>
+    <code>/@/</code>
+    <p>Explicación:</p>
+    <ul>
+      <li>Busca el carácter "@" en cualquier parte de la cadena.</li>
+    </ul>
+  </div>
+
+  <!-- Ejemplo 4: Comprobar si una cadena empieza con una palabra específica -->
+  <div class="example">
+    <h2>4. Comprobar si una cadena empieza con "Hola"</h2>
+    <p>Expresión regular para validar que una cadena comience con la palabra "Hola":</p>
+    <code>/^Hola/</code>
+    <p>Explicación:</p>
+    <ul>
+      <li><strong>^</strong>: Comienza desde el inicio de la cadena.</li>
+      <li><strong>Hola</strong>: La palabra "Hola".</li>
+    </ul>
+  </div>
+
+  <!-- Ejemplo 5: Comprobar si una cadena termina con un punto -->
+  <div class="example">
+    <h2>5. Comprobar si una cadena termina con un punto</h2>
+    <p>Expresión regular para validar que una cadena termine con un punto:</p>
+    <code>/\.$/</code>
+    <p>Explicación:</p>
+    <ul>
+      <li><strong>\.</strong>: El carácter de punto (se escapa con \).</li>
+      <li><strong>$</strong>: Final de la cadena.</li>
+    </ul>
+  </div>
+
+  <!-- Ejemplo 6: Comprobar si una cadena es un número de teléfono -->
+  <div class="example">
+    <h2>6. Comprobar si una cadena es un número de teléfono</h2>
+    <p>Expresión regular para validar un número de teléfono en formato de 10 dígitos:</p>
+    <code>/^\d{10}$/</code>
+    <p>Explicación:</p>
+    <ul>
+      <li><strong>^</strong>: Comienza desde el inicio de la cadena.</li>
+      <li><strong>\d{10}</strong>: Exactamente 10 dígitos numéricos.</li>
+      <li><strong>$</strong>: Final de la cadena.</li>
+    </ul>
+  </div>
+
+  <!-- Ejemplo 7: Validar una dirección de correo electrónico simple -->
+  <div class="example">
+    <h2>7. Validar una dirección de correo electrónico simple</h2>
+    <p>Expresión regular para validar un correo electrónico básico:</p>
+    <code>/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/</code>
+    <p>Explicación:</p>
+    <ul>
+      <li><strong>^[a-zA-Z0-9._%+-]+</strong>: El inicio del correo con caracteres alfanuméricos y algunos caracteres especiales.</li>
+      <li><strong>@</strong>: El símbolo de arroba.</li>
+      <li><strong>[a-zA-Z0-9.-]+</strong>: El dominio de la dirección.</li>
+      <li><strong>\.[a-zA-Z]{2,}</strong>: La extensión del dominio, con al menos 2 caracteres.</li>
+    </ul>
+  </div>
+
+  <!-- Ejemplo 8: Validar una fecha en formato DD/MM/AAAA -->
+  <div class="example">
+    <h2>8. Validar una fecha en formato DD/MM/AAAA</h2>
+    <p>Expresión regular para validar fechas en el formato de dos dígitos de día, mes y año:</p>
+    <code>/^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$/</code>
+    <p>Explicación:</p>
+    <ul>
+      <li><strong>^(0[1-9]|1[0-2])</strong>: Mes (01-12).</li>
+      <li><strong>(0[1-9]|[12][0-9]|3[01])</strong>: Día (01-31).</li>
+      <li><strong>\d{4}</strong>: Año (cuatro dígitos).</li>
+    </ul>
+  </div>
+
+  <!-- Ejemplo 9: Verificar una dirección IP -->
+  <div class="example">
+    <h2>9. Verificar una dirección IP (IPv4)</h2>
+    <p>Expresión regular para validar una dirección IP en formato IPv4:</p>
+    <code>/^((25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)$/</code>
+    <p>Explicación:</p>
+    <ul>
+      <li>Valida cuatro octetos separados por puntos, cada uno entre 0 y 255.</li>
+    </ul>
+  </div>
+
+  <!-- Ejemplo 10: Validar un código postal de 5 dígitos -->
+  <div class="example">
+    <h2>10. Validar un código postal de 5 dígitos</h2>
+    <p>Expresión regular para validar un código postal de 5 dígitos:</p>
+    <code>/^\d{5}$/</code>
+    <p>Explicación:</p>
+    <ul>
+      <li><strong>^</strong>: Comienza desde el inicio de la cadena.</li>
+      <li><strong>\d{5}</strong>: Exactamente 5 dígitos numéricos.</li>
+      <li><strong>$</strong>: Final de la cadena.</li>
+    </ul>
+  </div>
+</body>
+</html>

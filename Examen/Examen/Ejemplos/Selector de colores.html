@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Agrupación de Selectores en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+
+    /* Agrupación de selectores para aplicar estilos similares */
+    h1, h2, h3 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .container, .footer, .header {
+      background-color: #ffffff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Agrupación de selectores con diferentes clases */
+    .highlight, .important {
+      font-weight: bold;
+      color: #e74c3c;
+    }
+
+    .button, .link {
+      display: inline-block;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .button {
+      background-color: #3498db;
+      color: white;
+    }
+
+    .link {
+      background-color: #2ecc71;
+      color: white;
+    }
+
+    .button:hover, .link:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de Agrupación de Selectores en CSS</h1>
+  <a href="../index.html">Inicio</a>
+  <a href="./index.html">Ejemplos</a>
+
+  <!-- Ejemplo de agrupación de etiquetas -->
+  <h2>Encabezados agrupados</h2>
+  <h1>Título de nivel 1</h1>
+  <h2>Título de nivel 2</h2>
+  <h3>Título de nivel 3</h3>
+
+  <!-- Ejemplo de agrupación de elementos de texto -->
+  <p>Este es un párrafo de texto.</p>
+  <li>Elemento de lista 1</li>
+  <li>Elemento de lista 2</li>
+
+  <!-- Ejemplo de agrupación de clases -->
+  <div class="container">Contenedor con estilo</div>
+  <footer class="footer">Pie de página con estilo</footer>
+  <header class="header">Encabezado con estilo</header>
+
+  <!-- Ejemplo de agrupación de clases para aplicar estilos similares -->
+  <p class="highlight">Este texto es importante y resaltado.</p>
+  <p class="important">Este texto también es importante y resaltado.</p>
+
+  <!-- Botón y enlace con la misma estructura de estilos -->
+  <a href="#" class="button">Botón de ejemplo</a>
+  <a href="#" class="link">Enlace de ejemplo</a>
+</body>
+</html>

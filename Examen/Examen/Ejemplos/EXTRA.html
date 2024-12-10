@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumen de Temas de CSS</title>
+  <style>
+    /* Pseudoclases de CSS */
+    .pseudo-class:hover {
+      color: red;
+    }
+    .pseudo-class:nth-child(odd) {
+      background-color: #e74c3c;
+    }
+    .pseudo-class:nth-child(even) {
+      background-color: #2ecc71;
+    }
+
+    /* Pseudo-elementos */
+    .element::before {
+      content: "Inicio - ";
+      font-weight: bold;
+    }
+    .element::after {
+      content: " - Fin";
+      font-style: italic;
+    }
+
+    /* Accesibilidad */
+    .accessible {
+      border: 2px solid #000;
+      padding: 10px;
+    }
+    .accessible[aria-hidden="true"] {
+      color: grey;
+    }
+
+    /* Propiedades de Posicionamiento */
+    .position {
+      position: relative;
+      z-index: 2;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    /* Animaciones y Transiciones */
+    .animation-example {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      animation: slide 2s infinite;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(50px); }
+      100% { transform: translateX(0); }
+    }
+
+    /* Funciones CSS avanzadas */
+    .calc-example {
+      width: calc(100% - 20px);
+    }
+
+    .clamp-example {
+      font-size: clamp(1rem, 2vw + 1rem, 3rem);
+    }
+
+    /* Box Shadows y Text Shadows */
+    .shadow-example {
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <h1>Resumen de Temas de CSS</h1>
+  <a href="../index.html">Inicio</a>
+  <a href="./index.html">Ejemplos</a>
+
+  <section>
+    <h2>Pseudoclases y Pseudo-elementos</h2>
+    <p class="pseudo-class">Este párrafo cambia de color al pasar el cursor.</p>
+    <p class="pseudo-class">Este párrafo es parte de una lista y está coloreado de forma alterna (impar).</p>
+    <p class="pseudo-class">Este párrafo es parte de una lista y está coloreado de forma alterna (par).</p>
+
+    <div class="element">Este elemento tiene pseudo-elementos de inicio y fin.</div>
+  </section>
+
+  <section>
+    <h2>Accesibilidad</h2>
+    <div class="accessible" aria-hidden="true">Este elemento está marcado como no visible para tecnologías de asistencia.</div>
+  </section>
+
+  <section>
+    <h2>Propiedades de Posicionamiento</h2>
+    <div class="position">Elemento posicionado con z-index.</div>
+    <div class="overlay">Elemento en capa superior con z-index 1.</div>
+  </section>
+
+  <section>
+    <h2>Animaciones y Transiciones</h2>
+    <div class="animation-example"></div>
+  </section>
+
+  <section>
+    <h2>Funciones CSS Avanzadas</h2>
+    <div class="calc-example">Ancho ajustado con la función calc().</div>
+    <div class="clamp-example">Texto con un tamaño de fuente ajustable entre un rango definido.</div>
+  </section>
+
+  <section>
+    <h2>Box Shadows y Text Shadows</h2>
+    <div class="shadow-example">Elemento con sombra de caja y sombra de texto.</div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de clip-path y formas básicas</title>
+  <style>
+    .container {
+      display: flex;
+      gap: 20px;
+      margin: 20px;
+      flex-wrap: wrap;
+    }
+
+    .shape {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    /* Rectángulo (por defecto, sin clip-path) */
+    .rectangle {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+    }
+
+    /* Cuadrado */
+    .square {
+      width: 100px;
+      height: 100px;
+      background-color: lightgreen;
+    }
+
+    /* Círculo */
+    .circle {
+      width: 100px;
+      height: 100px;
+      background-color: lightcoral;
+      clip-path: circle(50%);
+    }
+
+    /* Elipse */
+    .ellipse {
+      width: 150px;
+      height: 100px;
+      background-color: lightgoldenrodyellow;
+      clip-path: ellipse(70% 50%);
+    }
+
+    /* Polígono (triángulo) */
+    .polygon {
+      width: 0;
+      height: 0;
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-bottom: 100px solid lightpink;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de clip-path y formas básicas</h1>
+  <a href="../index.html">Inicio</a>
+  <a href="./index.html">Ejemplos</a>
+
+  <div class="container">
+    <div class="shape rectangle">Rectángulo</div>
+    <div class="shape square">Cuadrado</div>
+    <div class="shape circle">Círculo</div>
+    <div class="shape ellipse">Elipse</div>
+    <div class="shape polygon">Polígono</div>
+  </div>
+</body>
+</html>

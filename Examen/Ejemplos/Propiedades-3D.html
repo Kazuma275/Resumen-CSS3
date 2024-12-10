@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Propiedades 3D en CSS</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      perspective: 1000px; /* Define la distancia de la perspectiva */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: #3498db;
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 16px;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+    }
+
+    .box.x:hover {
+      transform: rotateX(45deg);
+    }
+
+    .box.y:hover {
+      transform: rotateY(45deg);
+    }
+
+    .box.z:hover {
+      transform: rotateZ(45deg);
+    }
+
+    .box.all:hover {
+      transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg);
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de Propiedades 3D: rotateX(), rotateY(), rotateZ(), y combinación</h1>
+  <a href="../index.html">Inicio</a>
+  <a href="./index.html">Ejemplos</a>
+  
+  <div class="container">
+    <div class="box x">rotateX</div>
+    <div class="box y">rotateY</div>
+    <div class="box z">rotateZ</div>
+    <div class="box all">rotateX + Y + Z</div>
+  </div>
+
+  <p>Pasa el cursor sobre cada cuadro para ver la rotación 3D en diferentes ejes.</p>
+</body>
+</html>

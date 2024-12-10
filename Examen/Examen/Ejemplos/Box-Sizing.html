@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de box-sizing</title>
+  <style>
+    .container {
+      margin: 20px;
+    }
+
+    .box {
+      width: 200px;
+      height: 100px;
+      padding: 20px;
+      border: 5px solid #333;
+      background-color: lightblue;
+      box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+      margin-bottom: 20px;
+    }
+
+    .box-default {
+      width: 200px;
+      height: 100px;
+      padding: 20px;
+      border: 5px solid #333;
+      background-color: lightgreen;
+      /* box-sizing: content-box; por defecto en CSS */
+      margin-bottom: 20px;
+    }
+
+    .box-content {
+      width: 200px;
+      height: 100px;
+      padding: 20px;
+      border: 5px solid #333;
+      background-color: lightcoral;
+      box-sizing: content-box; /* Solo el contenido cuenta para el tamaño, no el padding ni el borde */
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de box-sizing en CSS</h1>
+  <a href="../index.html">Inicio</a>
+  <a href="./index.html">Ejemplos</a>
+
+  <div class="container">
+    <div class="box">box-sizing: border-box</div>
+    <div class="box-default">box-sizing: content-box (por defecto)</div>
+    <div class="box-content">box-sizing: content-box</div>
+  </div>
+</body>
+</html>

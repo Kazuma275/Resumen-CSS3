@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Selectores Avanzados en CSS</title>
+  <style>
+    /* Ejemplos de Selectores Avanzados */
+
+    /* 1. Selectores de atributo */
+    a[href$=".pdf"] {
+      color: red; /* Selecciona los enlaces cuyo atributo href termina en ".pdf" */
+    }
+
+    input[type="text"] {
+      border: 1px solid blue; /* Selecciona los inputs de tipo texto */
+    }
+
+    div[data-user="admin"] {
+      background-color: lightgray; /* Selecciona elementos div con un atributo data-user="admin" */
+    }
+
+    /* 2. Pseudo-clases avanzadas */
+    li:nth-child(odd) {
+      background-color: lightblue; /* Selecciona los elementos <li> en posiciones impares */
+    }
+
+    p:nth-of-type(2) {
+      font-weight: bold; /* Selecciona el segundo elemento <p> de su tipo en su contenedor */
+    }
+
+    button:hover {
+      background-color: green; /* Selecciona el botón al pasar el ratón */
+    }
+
+    input:focus {
+      border-color: orange; /* Selecciona el input cuando tiene el foco */
+    }
+
+    /* 3. Pseudo-elementos */
+    p::first-letter {
+      font-size: 200%; /* Estiliza la primera letra de cada <p> */
+    }
+
+    p::before {
+      content: "Nota: ";
+      font-weight: bold; /* Inserta un texto antes de cada elemento <p> */
+    }
+
+    p::after {
+      content: " - Fin de la nota";
+      color: gray; /* Inserta un texto después de cada elemento <p> */
+    }
+
+    /* 4. Selectores combinados */
+    div > p {
+      color: blue; /* Selecciona los <p> que son hijos directos de un <div> */
+    }
+
+    section + div {
+      margin-top: 20px; /* Selecciona un <div> que sigue a un elemento <section> */
+    }
+
+    ul li:first-of-type {
+      font-style: italic; /* Selecciona el primer <li> de cada <ul> */
+    }
+
+    /* 5. Pseudo-clases de uso avanzado */
+    a:not(.active) {
+      color: gray; /* Selecciona los enlaces que no tienen la clase "active" */
+    }
+
+    input:checked {
+      background-color: yellow; /* Selecciona los inputs que están marcados (checkbox, radio) */
+    }
+
+    ::selection {
+      background-color: lightcoral; /* Cambia el color de fondo al seleccionar un texto */
+    }
+
+    /* 6. Selectores de descendientes y hermanos */
+    div p {
+      color: darkgreen; /* Selecciona todos los <p> dentro de un <div> */
+    }
+
+    p ~ span {
+      color: purple; /* Selecciona todos los <span> que son hermanos de un <p> */
+    }
+
+    h1 + p {
+      font-size: 18px; /* Selecciona el primer <p> que sigue a un <h1> */
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de Selectores Avanzados en CSS</h1>
+  <a href="../index.html">Inicio</a>
+  <a href="./index.html">Ejemplos</a>
+
+  <p>Este es un párrafo de ejemplo. La primera letra de este párrafo es más grande.</p>
+
+  <a href="documento.pdf">Enlace a un PDF</a>
+  <a href="pagina.html">Enlace a otra página</a>
+
+  <input type="text" placeholder="Texto de ejemplo">
+
+  <div data-user="admin">Este div tiene un atributo data-user="admin".</div>
+  <div>
+    <p>Este es un párrafo hijo de un div.</p>
+  </div>
+
+  <section>Sección</section>
+  <div>Sigue a una sección</div>
+
+  <ul>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+  </ul>
+
+  <button>Hover para cambiar color</button>
+
+  <p>Texto con <span>un hermano</span> que se estiliza de forma diferente.</p>
+</body>
+</html>
